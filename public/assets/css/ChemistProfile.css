@@ -1,0 +1,83 @@
+.design-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #dee2d9;
+    min-height: 100vh;
+    padding: 20px 0 0 0;
+    font-family: Jost;
+  }
+  
+  .design {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .timeline {
+    width: 95%;
+    height: auto;
+    max-width: 1500px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .timeline-content {
+    padding: 20px;
+    background: #f4ebc0;
+    border-radius: 5px;
+    color: black;
+    padding: 1.75rem;
+    transition: 0.4s ease;
+    overflow-wrap: break-word !important;
+    margin: 1rem;
+    margin-bottom: 20px;
+    border-radius: 6px;
+  }
+  
+  .timeline-year {
+    float: right;
+    text-align: right; /* Ensures the text inside is aligned to the right */
+    margin-right: 20px; /* Adjust as needed for spacing */
+    color:black;
+}
+
+@media screen and (min-width: 768px) {
+    .timeline {
+      display: grid;
+      grid-template-columns: 1fr 3px 2fr;
+    }
+    .timeline-middle {
+      position: relative;
+      background-color: white;
+      width: 3px;
+      height: 100%;
+    }
+    .main-middle {
+      opacity: 0;
+    }
+    .timeline-circle {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+      background-color: white;
+      -webkit-transform: translateX(-50%);
+              transform: translateX(-50%);
+    }
+  }
+
+  .biography-image {
+    float: left;
+    margin-right: 20px; /* Adjust this value for desired spacing */
+    max-width: 200px;
+    margin-bottom: 10px; /* Optional: Adds space below the image */
+}
+
+.biography-description {
+    overflow: hidden; /* Ensures the container adjusts around floated elements */
+}

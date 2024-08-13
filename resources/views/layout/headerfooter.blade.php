@@ -47,7 +47,7 @@
         <!-- Uncomment the line below if you also wish to use an image logo -->
         <img src="assets/img/nuclearlogo.png" alt="">
 
-        <h1>ChemistryExplorer</h1>
+        <h1>ChemistoryExplorer</h1>
       </a>
 
       <nav id="navbar" class="navbar">
