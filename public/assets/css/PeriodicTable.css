@@ -1,0 +1,190 @@
+body {
+    font-family: sans-serif;
+    text-align: center;
+    padding-left: 2px;
+}
+
+/* legend box*/
+.legend-box {
+    margin-bottom: 20px;
+    width: 100%; 
+    text-align: center;
+}
+
+.legend-box h2 {
+    margin-top: 0;
+    font-size: 18px;
+    color: #000;
+}
+
+.legend-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Center items */
+}
+
+.legend-list li {
+    margin: 8px 15px; /* Adjust spacing between items */
+    display: flex;
+    align-items: center;
+}
+
+.legend-list li span {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    margin-right: 10px;
+    border-radius: 3px;
+}
+
+.periodic-table {
+    display: grid;
+    grid-template-columns: repeat(18, 1fr); /* 18 columns for a periodic table */
+    gap: 5px;
+    max-width: 100%;
+}
+h1 {
+    text-align: center;
+    font-size: 45px;
+    height: 40px;
+}
+.element {
+   
+    color: rgb(5, 5, 5);
+    padding: 5px; /*Size untuk setiap element*/
+    text-align: center;
+    border-radius: 5px;
+    position: relative;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    border: 1px solid #ccc;
+}
+
+.element:hover {/*Hover*/
+    background-color: #ddd; 
+    color: black; 
+    cursor: pointer; 
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2); 
+    transform: scale(1.1);
+    transition: all 0.2s ease-in-out; 
+}
+
+.element:hover::after {
+    display: block;
+}
+/* Color classes for the legend */
+.diatomic-nonmetal {
+    background-color: #eddda8; /* Example color */
+}
+
+.alkali-metal {
+    background-color: #df9fe1; /* Example color */
+}
+
+.metalloid {
+    background-color: #c6980e; /* Example color */
+}
+
+.post-transition-metal {
+    background-color: #cfeb88; /* Example color */
+}
+
+.lanthanide {
+    background-color: #feeff2; /* Example color */
+}
+
+.noble-gas {
+    background-color: #e8e3ff; /* Example color */
+}
+
+.alkaline-earth-metal {
+    background-color: #99d3ee; /* Example color */
+}
+
+.polyatomic-nonmetal {
+    background-color: orange; /* Example color */
+}
+
+.transition-metal {
+    background-color: #fcf389; /* Example color */
+}
+
+.actinide {
+    background-color: #ffbec2; /* Example color */
+}
+
+abbr {
+    text-decoration: none !important;
+}
+
+td {
+    height: 50px;
+    width: 50px;
+    cursor: pointer;
+}
+
+table {
+    margin: 40px auto;
+}
+
+/* New popup styles */
+.popup {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.popup-content {
+    background-color: #fff;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 460px;
+    text-align: left;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+}
+
+.popup-content h2 {
+    margin-top: 0;
+    font-size: 24px;
+    text-align: center;
+    color: #333;
+}
+
+#element-details p {
+    margin: 10px 0;
+    font-size: 18px;
+    color: #555;
+}
+
+#element-details p strong {
+    color: #000;
+}
+
+#element-details td {
+    color: black;
+}
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+}
+/* End popup styles */

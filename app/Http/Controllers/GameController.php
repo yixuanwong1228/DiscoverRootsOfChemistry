@@ -25,4 +25,9 @@ class GameController extends Controller
         
         return view('Isotopes');
     }
+
+    public function PeriodicTable_Index(){
+        
+        return view('PeriodicTable');
+    }
 }

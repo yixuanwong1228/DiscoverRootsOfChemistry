@@ -27,3 +27,4 @@ Route::get('/AtomicStructure_Index',[GameController::class,'AtomicStructure_Inde
 Route::get('/Isotopes_Index',[GameController::class,'Isotopes_Index']);
 Route::get('/Chemist_Index',[ChemistController::class,'Chemist_Index']);
 Route::get('/Chemist_Profile',[ChemistController::class,'Chemist_Profile']);
+Route::get('/PeriodicTable_Index',[GameController::class,'PeriodicTable_Index']);
