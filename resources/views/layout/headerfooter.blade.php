@@ -75,6 +75,21 @@
           </li>
           <li><a href="services.html">Services</a></li>
           <li><a href="contact.html">Contact</a></li>
+          @if(Route::has('login'))
+            @auth
+            <li>
+              <a href="#" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                  Logout
+              </a>
+          </li>
+          <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+              @csrf
+          </form>
+            
+          @else
+            <li><a href="{{ route('login') }}">Sign In</a></li>
+          @endauth
+          @endif
         </ul>
       </nav><!-- .navbar -->
 

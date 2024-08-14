@@ -34,7 +34,7 @@
               <img src="assets/img/thumbnail/atommolecule.png" class="img-fluid" alt="">
               <div class="gallery-links d-flex align-items-center justify-content-center">
                 <a href="assets/img/thumbnail/atommolecule.png" title="Gallery 2" class="glightbox preview-link"><i class="bi bi-arrows-angle-expand"></i></a>
-                <a href="gallery-single.html" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                <a href="{{route('showAtomMolecule')}}" class="details-link"><i class="bi bi-link-45deg"></i></a>
               </div>
             </div>
           </div><!-- End Gallery Item -->
@@ -88,7 +88,13 @@
               <img src="assets/img/thumbnail/Quiz.png" class="img-fluid" alt="">
               <div class="gallery-links d-flex align-items-center justify-content-center">
                 <a href="assets/img/thumbnail/Quiz.png" title="Gallery 8" class="glightbox preview-link"><i class="bi bi-arrows-angle-expand"></i></a>
-                <a href="gallery-single.html" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                @if(Route::has('login'))
+                @auth
+                <a href="{{route('showQuiz')}}" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                @else
+                <a href="{{route('login')}}" class="details-link"><i class="bi bi-link-45deg" onclick="return confirm('Please log in to your account before starting the quiz. Thank you!')"></i></a>
+                @endauth
+                @endif
               </div>
             </div>
           </div><!-- End Gallery Item -->
