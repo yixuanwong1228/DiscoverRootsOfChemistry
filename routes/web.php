@@ -67,5 +67,5 @@ Route::get('/Chemist_Index',[ChemistController::class,'Chemist_Index']);
 Route::get('/Chemist_Profile/{id}',[ChemistController::class,'Chemist_Profile'])->name('chemist.profile');
 
 Route::get('/Chemist_Profile',[ChemistController::class,'Chemist_Profile']);
-
-
+Route::get('/PeriodicTable_Index',[GameController::class,'PeriodicTable_Index']);
+Route::get('/word_guess',[GameController::class,'word_guess']);

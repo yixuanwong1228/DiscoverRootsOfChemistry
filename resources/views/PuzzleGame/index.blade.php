@@ -19,8 +19,8 @@
 @section('content')
 
 
-<main id="main" data-aos="fade" data-aos-delay="1500" class="mt-5">
-    <img src="/assets/img/Puzzle/puzzlefont.png" style="margin-top:70px; max-width:400px;">
+<main id="main" data-aos="fade" data-aos-delay="1500" style="margin-top:100px;">
+<h3 class="p-1 text-center" >Atom Puzzle</h3>
     <div class="row mt-2">
     <div class="col-md-4 mb-4">
             <a href="{{ route('puzzle_board', ['name' => 'Carbon']) }}" class="thumbnail-card" style="text-decoration:none;">
