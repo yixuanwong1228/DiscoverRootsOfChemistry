@@ -25,6 +25,10 @@ Route::get('/', function () {
 });
 
 
+Route::get('/puzzle_index',[GameController::class,'puzzle_index']);
+Route::get('/puzzle_board/{name}', [GameController::class, 'puzzle_board'])->name('puzzle_board');
+
+
 //AtomMoleculeController
 Route::get('/showAtomMolecule', [AtomMoleculeController::class, 'showAtomMolecule'])->name('showAtomMolecule');
 Route::get('/atomMoleculeDetails/{id}', [AtomMoleculeController::class, 'atomMoleculeDetails'])->name('atomMoleculeDetails');
@@ -51,6 +55,7 @@ Route::middleware([
     })->name('dashboard');
 });
 
+
 Route::get('/VirtualLab_Index',[GameController::class,'VirtualLab_Index']);
 
 Route::get('/face_change_game',[GameController::class,'face_change_game']);
@@ -58,5 +63,9 @@ Route::get('/face_change_game',[GameController::class,'face_change_game']);
 Route::get('/AtomicStructure_Index',[GameController::class,'AtomicStructure_Index']);
 Route::get('/Isotopes_Index',[GameController::class,'Isotopes_Index']);
 Route::get('/Chemist_Index',[ChemistController::class,'Chemist_Index']);
+
+Route::get('/Chemist_Profile/{id}',[ChemistController::class,'Chemist_Profile'])->name('chemist.profile');
+
 Route::get('/Chemist_Profile',[ChemistController::class,'Chemist_Profile']);
 Route::get('/PeriodicTable_Index',[GameController::class,'PeriodicTable_Index']);
+Route::get('/word_guess',[GameController::class,'word_guess']);

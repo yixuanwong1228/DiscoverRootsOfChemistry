@@ -8,7 +8,7 @@
       <link rel="stylesheet" href="/assets/css/Quiz/quiz.css"/>
         <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-        <title>PhotoFolio Bootstrap Template - Index</title>
+        <title>ChemistoryExplorer</title>
         <meta content="" name="description">
         <meta content="" name="keywords">
 
