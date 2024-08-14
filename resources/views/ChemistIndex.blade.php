@@ -15,6 +15,7 @@
   cursor: pointer;
   transition: transform 0.2s;
   border: none;
+  
 }
 .thumbnail-card:hover {
   transform: scale(1.05);
@@ -43,38 +44,20 @@
 <section>
   <div class="container">
     <div class="row mt-4 d-flex justify-content-center">
+        @foreach($chemists as $chemist)
       <div class="col-md-4 mb-4 d-flex align-items-stretch">
         <div class="card thumbnail-card mx-auto">
-          <a href="{{url('/Chemist_Profile')}}" style="text-decoration:none;"> 
-            <img src="/assets/img/Chemist/MarieCurie.png" class="card-img-top thumbnail-img" alt="Marie Curie">
+          <a href="{{ route('chemist.profile', $chemist->chemistID) }}" style="text-decoration:none;">
+            <img src="{{ asset($chemist->profilePicture) }}" class="card-img-top thumbnail-img" alt="Marie Curie">
             <div class="card-body text-center">
-              <h5 class="card-title">Marie Curie</h5>
+              <h5 class="card-title">{{ $chemist->name }}</h5>
             </div>
           </a>
         </div>
-      </div>
-      <div class="col-md-4 mb-4 d-flex align-items-stretch">
-        <div class="card thumbnail-card mx-auto">
-          <a href="#" style="text-decoration:none;"> 
-            <img src="/assets/img/Chemist/IsaacNewton.jpg" class="card-img-top thumbnail-img" alt="Isaac Newton">
-            <div class="card-body text-center">
-              <h5 class="card-title">Isaac Newton</h5>
-            </div>
-          </a>
-        </div>
-      </div>
-      <div class="col-md-4 mb-4 d-flex align-items-stretch">
-        <div class="card thumbnail-card mx-auto">
-          <a href="#" style="text-decoration:none;"> 
-            <img src="/assets/img/Chemist/AmedeoAvogadro.jpg" class="card-img-top thumbnail-img" alt="Amedeo Avogadro">
-            <div class="card-body text-center">
-              <h5 class="card-title">Amedeo Avogadro</h5>
-            </div>
-          </a>
-        </div>
-      </div>
     </div>
-  </div>
+    @endforeach
+</div>
+
 </section>
 
 @endsection
