@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\GameController;
+use App\Http\Controllers\ChemistController;
 
 /*
 |--------------------------------------------------------------------------
@@ -27,4 +29,4 @@ Route::get('/face_change_game',[GameController::class,'face_change_game']);
 Route::get('/AtomicStructure_Index',[GameController::class,'AtomicStructure_Index']);
 Route::get('/Isotopes_Index',[GameController::class,'Isotopes_Index']);
 Route::get('/Chemist_Index',[ChemistController::class,'Chemist_Index']);
-Route::get('/Chemist_Profile',[ChemistController::class,'Chemist_Profile']);
+Route::get('/Chemist_Profile/{id}',[ChemistController::class,'Chemist_Profile'])->name('chemist.profile');

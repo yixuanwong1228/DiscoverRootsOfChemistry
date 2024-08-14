@@ -10,8 +10,8 @@
   </style>
 @section('content')
 
-<main id="main" data-aos="fade" data-aos-delay="1500">
-    <h3 class="p-1" style="margin-top:90px;">{{ $name }}</h3>
+<main id="main" data-aos="fade" data-aos-delay="1500" style="margin-bottom:90px;">
+    <h3 class="p-1" >{{ $name }}</h3>
         <input type="text" value="{{ $name }}" hidden id="puzzlename">
         <div id="board"></div>
         <h4>Turns: <span id="turns">0</span></h4>
