@@ -1,0 +1,71 @@
+
+#atom-container {
+    position: relative;
+    width: 400px;
+    height: 400px;
+    margin-top: 20px;
+}
+
+
+#particle-container {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.particle-box {
+    width: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.particle {
+    width: 15px; /* Increased size for better visibility */
+    height: 15px;
+    border-radius: 50%;
+    position: absolute;
+    cursor: grab;
+    margin: 5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3), -2px -2px 5px rgba(255, 255, 255, 0.5);
+    background: linear-gradient(145deg, #fff, #e6e6e6);
+    transition: transform 0.2s;
+}
+
+.particle:active {
+    transform: scale(1.1);
+}
+
+.proton {
+    background: radial-gradient(circle, #ff6347, #e53e3e);
+}
+
+.neutron {
+    background: radial-gradient(circle, #d3d3d3, #b0b0b0);
+}
+
+.electron {
+    background: radial-gradient(circle, #1e90ff, #00bfff);
+}
+
+#game-instructions {
+    margin-bottom: 20px;
+}
+
+#feedback {
+    margin-top: 20px;
+
+}
+
+.notation {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+.nucleon-number, .proton-number {
+    display: block;
+    line-height: 1; /* To adjust the spacing between the numbers */
+}

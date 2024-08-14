@@ -1,7 +1,6 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\GameController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,3 +19,12 @@ Route::get('/', function () {
 
 Route::get('/puzzle_index',[GameController::class,'puzzle_index']);
 Route::get('/puzzle_board/{name}', [GameController::class, 'puzzle_board'])->name('puzzle_board');
+
+Route::get('/VirtualLab_Index',[GameController::class,'VirtualLab_Index']);
+
+Route::get('/face_change_game',[GameController::class,'face_change_game']);
+
+Route::get('/AtomicStructure_Index',[GameController::class,'AtomicStructure_Index']);
+Route::get('/Isotopes_Index',[GameController::class,'Isotopes_Index']);
+Route::get('/Chemist_Index',[ChemistController::class,'Chemist_Index']);
+Route::get('/Chemist_Profile',[ChemistController::class,'Chemist_Profile']);
